@@ -27,8 +27,7 @@ TomatoVariety > gownUnder > GrowingCondition
 
 This ontology can be re-used such as:
 - In protoge
-File > Open from URL..
-Click the RDF/XML file format if needed
+File > Open from URL.. > Click the RDF/XML file format if needed
 
 ## Other Ontologies can import this Ontology
 
@@ -47,7 +46,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX tomato: <http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#>
+PREFIX tomato: <http://https://hera191.github.io/tomato-ontology/tomato#>
 ```
 
 - Query 1 -- List all tomato varieties and their colour
