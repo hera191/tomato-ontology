@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato/"
+     xml:base="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tomato="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato">
+        <rdfs:comment xml:lang="en-ie">This is an ontology about Tomatoes. This ontology is the second assignment for Human Centered System module.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#gownUnder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#gownUnder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#hasVariety -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#hasVariety">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#usesTomato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#usesTomato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#climate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#climate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#colour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#colour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#cookingMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#cookingMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#cuisine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#cuisine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#dishName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#dishName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#flavor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#flavor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#harvestDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#harvestDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#isOrganic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#isOrganic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#pH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#pH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#season -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#season">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#size">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#soilType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#soilType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#tomatoID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#tomatoID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#usesTomato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#usesTomato">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#varietyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#varietyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#weight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#usesTomato"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Fruit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Alicante_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Alicante_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition"/>
+        <tomato:colour>Red</tomato:colour>
+        <tomato:flavor>Sweet and acidy</tomato:flavor>
+        <tomato:size>Medium</tomato:size>
+        <tomato:varietyName>Alicante</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition"/>
+        <tomato:colour>Red</tomato:colour>
+        <tomato:flavor>Mild</tomato:flavor>
+        <tomato:size>Large</tomato:size>
+        <tomato:varietyName>Beefsteak</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Bruschetta_Dish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Bruschetta_Dish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Roma_Tomato"/>
+        <tomato:cookingMethod>Raw</tomato:cookingMethod>
+        <tomato:cuisine>Italian</tomato:cuisine>
+        <tomato:dishName>Bruschetta</tomato:dishName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Cabbage_Stew_Dish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Cabbage_Stew_Dish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato"/>
+        <tomato:cookingMethod>Simmered</tomato:cookingMethod>
+        <tomato:cuisine>Hungarian</tomato:cuisine>
+        <tomato:dishName>Cabbage Stew</tomato:dishName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gardeners_Delight_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gardeners_Delight_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition"/>
+        <tomato:colour>Red</tomato:colour>
+        <tomato:flavor>sweet, tangy and cherry</tomato:flavor>
+        <tomato:size>Medium</tomato:size>
+        <tomato:varietyName>Sugar Lump</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gazpacho_Dish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gazpacho_Dish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Roma_Tomato"/>
+        <tomato:cookingMethod>Raw</tomato:cookingMethod>
+        <tomato:cuisine>Spanish</tomato:cuisine>
+        <tomato:dishName>Gazpacho</tomato:dishName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+        <tomato:climate>Controlled</tomato:climate>
+        <tomato:season>Year-round</tomato:season>
+        <tomato:soilType>Loose, well-draining potting mix</tomato:soilType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Maskotka_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Maskotka_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition"/>
+        <tomato:colour>Bright Red</tomato:colour>
+        <tomato:flavor>exceptionally sweet</tomato:flavor>
+        <tomato:size>medium to large</tomato:size>
+        <tomato:varietyName>Maskotka</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Meatballs_in_Tomato_Sauce_Dish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Meatballs_in_Tomato_Sauce_Dish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Sungold_Tomato"/>
+        <tomato:cookingMethod>Simmered</tomato:cookingMethod>
+        <tomato:cuisine>Italian-American</tomato:cuisine>
+        <tomato:dishName>Polpette al Sugo</tomato:dishName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Moneymaker_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Moneymaker_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition"/>
+        <tomato:colour>Deep Red</tomato:colour>
+        <tomato:flavor>Sweet and Sour</tomato:flavor>
+        <tomato:size>Medium</tomato:size>
+        <tomato:varietyName>Moneymaker</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#GrowingCondition"/>
+        <tomato:climate>Warm Temperature</tomato:climate>
+        <tomato:season>Summer</tomato:season>
+        <tomato:soilType>Sandy Loam</tomato:soilType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Roma_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Roma_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition"/>
+        <tomato:colour>Red, Yellow, Orange, Pink</tomato:colour>
+        <tomato:flavor>Tangy and slightly Sweet</tomato:flavor>
+        <tomato:size>Medium</tomato:size>
+        <tomato:varietyName>Roma VF</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Shirley_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Shirley_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition"/>
+        <tomato:colour>Bright Red</tomato:colour>
+        <tomato:flavor>Perfect balance of sweet and tangy</tomato:flavor>
+        <tomato:size>Medium</tomato:size>
+        <tomato:varietyName>Shirley</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Sungold_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Sungold_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Greenhouse_Condition"/>
+        <tomato:colour>Golden-orange</tomato:colour>
+        <tomato:flavor>Exceptionally sweet</tomato:flavor>
+        <tomato:flavor>Small</tomato:flavor>
+        <tomato:varietyName>Sun Gold</tomato:varietyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <tomato:hasVariety rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato"/>
+        <tomato:harvestDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-10T00:00:00Z</tomato:harvestDate>
+        <tomato:isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tomato:isOrganic>
+        <tomato:pH rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</tomato:pH>
+        <tomato:tomatoID>tom-001</tomato:tomatoID>
+        <tomato:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</tomato:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <tomato:hasVariety rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gardeners_Delight_Tomato"/>
+        <tomato:harvestDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-15T00:00:00Z</tomato:harvestDate>
+        <tomato:isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tomato:isOrganic>
+        <tomato:pH rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</tomato:pH>
+        <tomato:tomatoID>tom-002</tomato:tomatoID>
+        <tomato:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.9</tomato:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <tomato:hasVariety rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Maskotka_Tomato"/>
+        <tomato:harvestDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</tomato:harvestDate>
+        <tomato:isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tomato:isOrganic>
+        <tomato:pH rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</tomato:pH>
+        <tomato:tomatoID>tom-003</tomato:tomatoID>
+        <tomato:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.2</tomato:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <tomato:hasVariety rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Roma_Tomato"/>
+        <tomato:harvestDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-08T00:00:00Z</tomato:harvestDate>
+        <tomato:isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tomato:isOrganic>
+        <tomato:pH rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.9</tomato:pH>
+        <tomato:tomatoID>tom-004</tomato:tomatoID>
+        <tomato:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</tomato:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato"/>
+        <tomato:hasVariety rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Beefsteak_Tomato"/>
+        <tomato:harvestDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-28T00:00:00Z</tomato:harvestDate>
+        <tomato:isOrganic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tomato:isOrganic>
+        <tomato:pH rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</tomato:pH>
+        <tomato:tomatoID>tom-005</tomato:tomatoID>
+        <tomato:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.9</tomato:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_Vodka_Pasta_Dish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Tomato_Vodka_Pasta_Dish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Dish"/>
+        <tomato:usesTomato rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Gardeners_Delight_Tomato"/>
+        <tomato:cookingMethod>Sautéing</tomato:cookingMethod>
+        <tomato:cuisine>Italian</tomato:cuisine>
+        <tomato:dishName>Penne alla Vodka</tomato:dishName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Yellow_Submarine_Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Yellow_Submarine_Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#TomatoVariety"/>
+        <tomato:gownUnder rdf:resource="http://www.semanticweb.org/tmolnar/ontologies/2026/3/tomato#Outdoor_Condition"/>
+        <tomato:colour>Bright yellow</tomato:colour>
+        <tomato:flavor>Sweet, mild, and fruity with very low acidity</tomato:flavor>
+        <tomato:size>Large</tomato:size>
+        <tomato:varietyName>Yellow Submarine</tomato:varietyName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
