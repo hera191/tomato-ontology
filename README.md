@@ -29,6 +29,19 @@ This ontology can be re-used such as:
 - In protoge
 File > Open from URL.. > Click the RDF/XML file format if needed
 
+```
+------------------------------- Loading Ontology ------------------------------- 
+Loading ontology from https://github.com/hera191/tomato-ontology 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+Finished loading https://github.com/hera191/tomato-ontology 
+```
+
 ## Other Ontologies can import this Ontology
 
 For example they can re-use the current ontoly to extend it or they can add the current ontology classes as subclasses as part of a larger system.
@@ -108,3 +121,31 @@ WHERE {
   ?dish tomato:cookingMethod ?cookingMethod .
 }
 ```
+
+# Reasoner results (HermiT 1.4.3.456)
+
+```
+------------------------------- Running Reasoner ------------------------------- 
+Pre-computing inferences: 
+    - class hierarchy 
+    - object property hierarchy 
+    - data property hierarchy 
+    - class assertions 
+    - object property assertions 
+    - same individuals 
+Ontologies processed in 131 ms by HermiT 
+```
+
+
+# Extension Tasks:
+
+- Created disjointness: Dish, TomatoVariety and GrowingCondition are all declared disjoint from each other as a dish cannot be a variety and cannot be a gowing condition.
+
+
+- Cardinality restriction: On the class Dish a restriction is used.
+
+```
+Dish SubClassOf usesTomato min 1 TomatoVariety
+```
+
+This command enforces that every Dish individual must be linked to at least one Tomato via usesTomato. A reasoner can flag this if a dish has no usesTomato assertion.
