@@ -1,6 +1,8 @@
 # tomato-ontology
 
-# Structure
+# 1. Workbook
+
+## Structure - Classes and Subclasses
 
 ```
 owl:Thing
@@ -12,45 +14,67 @@ owl:Thing
 └── GrowingCondition
 ```
 
-# Relationships
+## Relationships
++ gownUnder has been pronounced purposely like this because I made a mistake in the code earlier.
 
 ```
-Tomato > hasVariety > TomatoVariety
-Dish > usesTomato > TomatoVariety
-TomatoVariety > gownUnder > GrowingCondition
+Tomato > hasVariety > TomatoVariety             eg.: Tomato_001 > hasVariety > Roma_Tomato
+Dish > usesTomato > TomatoVariety               eg.: Bruschetta > usesTomato > Roma_tomato
+TomatoVariety > gownUnder > GrowingCondition    eg.: Roma_Tomato > gownUnder > Outdoor_Condition
 ```
 
+## Data properties
+- climate
+- colour
+- cookingMethod
+- cuisine
+- dishName                                     eg.: Bruschetta
+- flavor
+- harvestDate
+- isOrganic
+- pH
+- season
+- size
+- soilType
+- tomatoID
+- usesTomato
+- varietyName
+- weight
 
-# Usage of online owl file
+# 2. Emulation Task
+- 6 classes, 2 of them are subclasses
+- 3 object properties
+- 21 individuals
+- 3 object properties
 
-## Open it from the web in Protoge
+# 3. Extension Tasks
+- Assigned individuals to Tomato subclass
+- Defined disjointness:
+   - Dish cannot be a tomato variety
+   - Dish cannot be a growing condition
+- Cardinality restriction used on Dish class:
+   - usesTomato min 1 Tomato (which means 1 tomato must be used as minumum for every dish individual)
 
-This ontology can be re-used such as:
-- In protoge
-File > Open from URL.. > Click the RDF/XML file format if needed
+# 4. Resoning
+- Reasoning was used and helped me identify issues in code such as:
+  - wrong data type used for individuals
+
+## Reasoner results (HermiT 1.4.3.456)
 
 ```
-------------------------------- Loading Ontology ------------------------------- 
-Loading ontology from https://github.com/hera191/tomato-ontology 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-URL connection input stream is compressed using gzip 
-Finished loading https://github.com/hera191/tomato-ontology 
-```
+------------------------------- Running Reasoner ------------------------------- 
+Pre-computing inferences: 
+    - class hierarchy 
+    - object property hierarchy 
+    - data property hierarchy 
+    - class assertions 
+    - object property assertions 
+    - same individuals 
+Ontologies processed in 131 ms by HermiT 
+``` 
 
-## Other Ontologies can import this Ontology
-
-For example they can re-use the current ontoly to extend it or they can add the current ontology classes as subclasses as part of a larger system.
-
-## The Ontology can be pusblished
-
-Any large portal can be created, or an existing agricultural web portal can use this information for its database.
-
-# Queries
+# 5. SPARQL Queries
++ gownUnder has been pronounced purposely like this because I made a mistake in the code earlier, used In q3.
 
 - Prefixes
 
@@ -122,30 +146,34 @@ WHERE {
 }
 ```
 
-# Reasoner results (HermiT 1.4.3.456)
+
+# 6. Linked Data
+
+## How it could be reused
+
+### Open it from the web in Protoge
+
+This ontology can be re-used such as:
+- In protoge
+File > Open from URL.. > Click the RDF/XML file format if needed
 
 ```
-------------------------------- Running Reasoner ------------------------------- 
-Pre-computing inferences: 
-    - class hierarchy 
-    - object property hierarchy 
-    - data property hierarchy 
-    - class assertions 
-    - object property assertions 
-    - same individuals 
-Ontologies processed in 131 ms by HermiT 
+------------------------------- Loading Ontology ------------------------------- 
+Loading ontology from https://github.com/hera191/tomato-ontology 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+URL connection input stream is compressed using gzip 
+Finished loading https://github.com/hera191/tomato-ontology 
 ```
 
+### Other Ontologies can import this Ontology
 
-# Extension Tasks:
+For example they can re-use the current ontoly to extend it or they can add the current ontology classes as subclasses as part of a larger system.
 
-- Created disjointness: Dish, TomatoVariety and GrowingCondition are all declared disjoint from each other as a dish cannot be a variety and cannot be a gowing condition.
+### The Ontology can be pusblished
 
-
-- Cardinality restriction: On the class Dish a restriction is used.
-
-```
-Dish SubClassOf usesTomato min 1 TomatoVariety
-```
-
-This command enforces that every Dish individual must be linked to at least one Tomato via usesTomato. A reasoner can flag this if a dish has no usesTomato assertion.
+Any large portal can be created, or an existing agricultural web portal can use this information for its database.
